@@ -1,0 +1,17 @@
+*{
+    font-family: sans-serif; 
+    background-color: #1d1c1d;
+    color: rgb(188, 193, 199);
+    text-align: center;
+}
+.container{
+    width: 100%; 
+    margin-left: 0px;
+ 
+    overflow: hidden;
+    text-align: center;  
+}
+footer{
+    margin-top: 350px;
+    text-align: center;
+}

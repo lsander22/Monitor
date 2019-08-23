@@ -1,0 +1,64 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Monitoring V2.0</title>
+        <meta charset="utf-8">
+        <meta name="author" content="lsander">
+        <link rel="stylesheet" href="/css/style.css"> 
+        <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        
+        <header>
+            <div class="container">
+                <h1 id=time></h1>
+            </div>
+        </header>
+        <main>
+                <div id="chartContainer1" style="margin-top: 30px; height: 360px; width:70%;display:inline-block;">
+                    <canvas id="cpu"></canvas>       
+                </div>
+                
+        </main>
+        <footer>
+            <p id="text">coded by lsander & lwittenberg</p>
+        </footer>
+        <script src="/socket.js"></script>
+    </body>
+    <script>
+        function ticken(){
+            document.getElementById('time');
+            var stunden, minuten, sekunden; 
+            var Stundenzahl, Minutenzahl, Sekundenzahl;
+            var heute
+
+            heute = new Date(); 
+            Stundenzahl = heute.getHours();
+            Minutenzahl = heute.getMinutes();
+            Sekundenzahl = heute.getSeconds(); 
+
+            stunden = Stundenzahl+":";
+            if (Minutenzahl < 10){
+                minuten = "0" + Minutenzahl + ":";
+            }else{
+                minuten = Minutenzahl + ":";
+            }
+            if (Sekundenzahl < 10){
+                sekunden = "0" + Sekundenzahl + " ";
+            }else{
+                sekunden = Sekundenzahl + " ";
+            }
+            zeit = stunden + minuten + sekunden; 
+            time.innerHTML = zeit; 
+
+        }
+        window.onLoad = setInterval(function(){
+        
+         ticken();
+         
+        }, 1000);
+        
+    </script>
+</html>
