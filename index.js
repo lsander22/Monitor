@@ -38,7 +38,7 @@ const onlineEmit = () => {
     const date = new Date();
     const time = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
    
-    //console.log(`${time} - CPU (%): ${cpuSource}`);
+    console.log(`${time} - CPU (%): ${cpuSource}`);
 
     if (liveData.time.length >= dataCount){
         liveData.time.shift();

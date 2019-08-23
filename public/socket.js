@@ -30,6 +30,10 @@ const chart = new Chart(document.getElementById("cpu"), {
                 yAxes:[{
                     ticks: {
                         beginAtZero: true,
+                        max: 1,
+                        steps: 0.1,
+                        stepValue: 0.1,
+                        
                         /*userCallback: function (label, index, labels){
                             if (Math.floor(label) === label){
                                 return label; 
