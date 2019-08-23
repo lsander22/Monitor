@@ -5,5 +5,10 @@ CPU Monitoring Application using NodeJS, Express and Socket.io
 
 node index.js
 
+2. Watch Application 
+
+The App will be displayed on: 
+
+  http://localhost:3000
 
 
