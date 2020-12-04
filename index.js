@@ -14,7 +14,6 @@ var ms = 0;
 const dataCount = 20;
 var recByte = 0; 
 
-//Vielleicht lieber Objekte 
 const liveData = {
     cpu: [],
     time: [],
@@ -58,7 +57,6 @@ function getData(){
     liveData.sysuptime = os.sysUptime(); 
     si.fsStats().then(data => {
         ms = bytesToMb(data.wx_sec); 
-        //ms = data.wx_sec;
     })
     si.networkStats().then(data => {
         recByte = bytesToMb(data[0].rx_sec);
